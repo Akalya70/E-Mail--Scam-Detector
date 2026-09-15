@@ -438,41 +438,10 @@ Database
 
 ---
 
-# 👩‍💻 Author
 
-<p align="center">
 
-### **Akalya M**
 
-🎓 Computer Science & Engineering
 
-💻 Aspiring Software Developer
-
-</p>
-
-<p align="center">
-
-<a href="https://github.com/Akalya70">
-<img src="https://img.shields.io/badge/GitHub-Akalya70-black?style=for-the-badge&logo=github"/>
-</a>
-
-</p>
-
----
-
-# ⭐ Support
-
-If you found this project interesting, consider giving it a ⭐ on GitHub!
-
-<p align="center">
-
-**🔍 Analyze Emails • 🤖 Detect Threats • 🛡️ Stay Safe**
-
-</p>
-
----
-
-<p align="center">
 
 ### 🚀 Built with Python & Machine Learning
 
