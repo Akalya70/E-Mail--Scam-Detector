@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scan History</h1>
+        <p class="subtitle">All previously analyzed emails, most recent first.</p>
+
+        {% if db_error %}
+        <div class="error-box">Could not load history: {{ db_error }}</div>
+        {% endif %}
+
+        {% if scans %}
+        <table class="history-table">
+            <tr>
+                <th>Date</th>
+                <th>Sender</th>
+                <th>Subject</th>
+                <th>Result</th>
+                <th>Risk Score</th>
+            </tr>
+            {% for sender, subject, result, risk_score, scanned_at in scans %}
+            <tr>
+                <td>{{ scanned_at }}</td>
+                <td>{{ sender }}</td>
+                <td>{{ subject if subject else "(no subject)" }}</td>
+                <td>
+                    {% if result == "Likely Legitimate" %}
+                        <span class="badge badge-legitimate">{{ result }}</span>
+                    {% elif result == "Suspicious" %}
+                        <span class="badge badge-suspicious">{{ result }}</span>
+                    {% else %}
+                        <span class="badge badge-phishing">{{ result }}</span>
+                    {% endif %}
+                </td>
+                <td>{{ risk_score }}%</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p class="empty-state">No scans yet. Check an email first!</p>
+        {% endif %}
+
+        <div class="nav-links">
+            <a class="btn" href="{{ url_for('home') }}">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

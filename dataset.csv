@@ -1,0 +1,76 @@
+email_text,label
+"Your meeting is scheduled for tomorrow at 10 AM in conference room B",legitimate
+"Hello, your interview is scheduled for Monday at 10 AM. Please join using the company meeting link",legitimate
+"Please find attached the invoice for last month's services",legitimate
+"The quarterly report has been shared in the shared drive for your review",legitimate
+"Thank you for attending today's meeting, please review the notes I have attached",legitimate
+"Your package has been shipped and will arrive within 3 to 5 business days",legitimate
+"Reminder that the office will be closed on Friday for the public holiday",legitimate
+"Please review the attached document and share your feedback by Friday",legitimate
+"Your monthly salary slip has been generated and is available on the HR portal",legitimate
+"The project deadline has been extended to next Wednesday, please plan accordingly",legitimate
+"Thanks for your email, I will get back to you by the end of the day",legitimate
+"Your subscription renewal was successful, thank you for continuing with us",legitimate
+"Here is the agenda for tomorrow's team meeting",legitimate
+"Your doctor appointment is confirmed for next Tuesday at 3 PM",legitimate
+"Congratulations on completing your certification course",legitimate
+"The team lunch has been scheduled for Friday afternoon in the cafeteria",legitimate
+"Please find the minutes of yesterday's meeting attached for your reference",legitimate
+"Your flight booking confirmation and itinerary are attached to this email",legitimate
+"We appreciate your continued support and look forward to working with you",legitimate
+"Your order has been successfully placed and will be delivered soon",legitimate
+"The training session on new software tools will be held next week",legitimate
+"Please submit your timesheet before the end of this week",legitimate
+"Your feedback form for the recent workshop has been recorded, thank you",legitimate
+"The new office address and directions are attached for your reference",legitimate
+"Your annual performance review is scheduled for next month",legitimate
+"Here are the notes from today's client call as requested",legitimate
+"Your library book is due for return next Monday",legitimate
+"The system maintenance is scheduled for this weekend, no action required",legitimate
+"Please let me know if you are available for a quick call tomorrow",legitimate
+"Your gym membership has been renewed successfully for another year",legitimate
+"Congratulations! You have won a lottery prize of one million dollars, click immediately to claim",phishing
+"Urgent! Your bank account will be blocked today. Click this link immediately and enter your password",phishing
+"Your account has been suspended, verify your password and OTP right now to restore access",phishing
+"You are the winner of our monthly prize draw, click here and enter your bank details",phishing
+"Dear customer your card has been blocked, verify your account information urgently to avoid closure",phishing
+"Click here now to claim your free gift card before it expires today",phishing
+"Your PayPal account has unusual activity, verify your password immediately or lose access",phishing
+"Urgent action required, confirm your OTP within 10 minutes or your account will be blocked",phishing
+"Congratulations winner, you have been selected to receive a cash prize, click here to claim",phishing
+"Your account security has been compromised, click the link below and enter your password now",phishing
+"Verify your bank account immediately by clicking this link and entering your PIN",phishing
+"Your email storage is full, click here immediately to verify your password and avoid suspension",phishing
+"Final notice, your account will be permanently blocked unless you verify your password today",phishing
+"You have won an iPhone, click here now and provide your bank account and OTP",phishing
+"Security alert, unusual login detected, verify your password immediately to secure your account",phishing
+"Your parcel could not be delivered, click here and pay a small fee with your card details",phishing
+"Act now, your tax refund is ready, click the link and enter your bank account details",phishing
+"Dear winner, congratulations, claim your prize now by clicking here and entering your details",phishing
+"Your netflix account has been locked, verify your password and card details urgently",phishing
+"Urgent, click here to reactivate your account and avoid permanent suspension of your password",phishing
+"Your amazon account was accessed from a new device, verify your password immediately by clicking here",phishing
+"Congratulations you have won a free vacation, click here and enter your bank OTP to claim",phishing
+"Immediate action needed, your account will be closed today, verify password and OTP now",phishing
+"Your invoice payment failed, click here immediately and update your card and password details",phishing
+"You have an unclaimed prize waiting, click here now and enter your bank account number",phishing
+"Your account requires verification, please review your account information when convenient",suspicious
+"We noticed unusual activity on your account, please confirm your recent login",suspicious
+"Please update your profile information to continue using our services",suspicious
+"Your subscription is about to expire, please review your billing details",suspicious
+"There was an issue processing your last payment, please check your account",suspicious
+"Please confirm your email address to keep your account active",suspicious
+"Your account information appears incomplete, please review and update it",suspicious
+"We could not verify your recent transaction, please check your account details",suspicious
+"Please take a moment to review your recent account activity for accuracy",suspicious
+"Your password will expire soon, please consider updating it at your convenience",suspicious
+"We need to confirm a few details about your account, please review when possible",suspicious
+"Your recent order could not be verified, please review your payment method",suspicious
+"Please review the terms and conditions update for your account",suspicious
+"There seems to be a mismatch in your account details, kindly review",suspicious
+"Your account activity looks different from usual, please take a look when free",suspicious
+"Kindly verify your contact information to ensure uninterrupted service",suspicious
+"We noticed a login from a new location, please review your account if this was not you",suspicious
+"Please confirm your shipping address to avoid delay in delivery",suspicious
+"Your document verification is pending, please check the portal at your convenience",suspicious
+"A minor update to your account settings requires your attention",suspicious

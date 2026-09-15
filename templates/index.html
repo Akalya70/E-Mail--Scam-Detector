@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Scam & Phishing Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI-Based Email Scam &amp; Phishing Detection System</h1>
+        <p class="subtitle">Paste an email below and the machine learning model will analyze it.</p>
+
+        {% if errors %}
+        <div class="error-box">
+            <ul>
+                {% for error in errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <form action="/check" method="POST">
+            <label for="sender">Sender Email:</label>
+            <input type="text" id="sender" name="sender" placeholder="e.g. someone@example.com"
+                   value="{{ sender if sender else '' }}">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Email subject line"
+                   value="{{ subject if subject else '' }}">
+
+            <label for="body">Email Body:</label>
+            <textarea id="body" name="body" placeholder="Paste the full email content here...">{{ body if body else '' }}</textarea>
+
+            <button type="submit">CHECK EMAIL</button>
+        </form>
+
+        <div class="nav-links">
+            <a class="btn btn-secondary" href="{{ url_for('history') }}">View History</a>
+        </div>
+
+        <div class="note-box">
+            <strong>Try a demo:</strong><br>
+            Legitimate: "Hello, your interview is scheduled for Monday at 10 AM. Please join using the company meeting link."<br>
+            Phishing: "URGENT! Your bank account will be blocked today. Click this link immediately and enter your password and OTP."<br>
+            Suspicious: "Your account requires verification. Please review your account information."
+        </div>
+    </div>
+</body>
+</html>

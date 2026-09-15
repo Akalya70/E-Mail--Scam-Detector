@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Analysis</h1>
+
+        {% if final_result == "Likely Legitimate" %}
+            {% set box_class = "result-legitimate" %}
+        {% elif final_result == "Suspicious" %}
+            {% set box_class = "result-suspicious" %}
+        {% else %}
+            {% set box_class = "result-phishing" %}
+        {% endif %}
+
+        <div class="result-box {{ box_class }}">
+            <h2>{{ final_result }}</h2>
+            <p>Risk Score: {{ risk_score }}% &mdash; {{ risk_level }}</p>
+        </div>
+
+        <table class="details-table">
+            <tr>
+                <td>Sender:</td>
+                <td>{{ sender }}</td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>{{ subject }}</td>
+            </tr>
+            <tr>
+                <td>ML Prediction:</td>
+                <td>{{ ml_predicted_label }}</td>
+            </tr>
+        </table>
+
+        <h3>Reason</h3>
+        <p>
+            The machine-learning model compared this email's wording against patterns it
+            learned from the training dataset and classified it as
+            <strong>{{ ml_predicted_label }}</strong>, giving a risk score of
+            <strong>{{ risk_score }}%</strong>.
+        </p>
+
+        <h3>Security Indicators</h3>
+        {% if indicators %}
+        <ul class="indicator-list">
+            {% for indicator in indicators %}
+            <li>{{ indicator }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="no-indicators">No obvious warning keywords or links were detected.</p>
+        {% endif %}
+
+        <div class="note-box">
+            This result is a prediction based on a small demonstration dataset, not a
+            guarantee. Terms like "Likely Phishing" reflect probability, not certainty.
+            Never click links or enter passwords in an email you did not expect,
+            regardless of this tool's output.
+        </div>
+
+        <div class="nav-links">
+            <a class="btn" href="{{ url_for('home') }}">Check Another Email</a>
+            <a class="btn btn-secondary" href="{{ url_for('history') }}">View History</a>
+        </div>
+    </div>
+</body>
+</html>
