@@ -114,4 +114,368 @@ This project is designed to provide users with an additional layer of awareness 
 
 **Low Risk**
 
-The email c
+The email contains fewer suspicious indicators.
+
+### 🟡 31–70
+
+**Medium Risk**
+
+The email contains some suspicious characteristics.
+
+### 🔴 71–100
+
+**High Risk**
+
+The email contains multiple phishing or scam indicators.
+
+> ⚠️ The score is an automated prediction, not a guarantee that an email is safe or malicious.
+
+---
+
+# 🤖 Machine Learning
+
+The project uses two main Machine Learning components.
+
+### 1️⃣ TF-IDF
+
+**TF-IDF = Term Frequency-Inverse Document Frequency**
+
+It converts email text into numerical features.
+
+Example:
+
+```text
+"Verify your password immediately"
+```
+
+TF-IDF identifies the importance of words such as:
+
+```text
+verify
+password
+immediately
+```
+
+and represents the text numerically.
+
+---
+
+### 2️⃣ Logistic Regression
+
+The numerical TF-IDF features are given to the **Logistic Regression** classifier.
+
+The model learns patterns from labeled email examples and predicts the category of a new email.
+
+```text
+Training Data
+      ↓
+TF-IDF
+      ↓
+Logistic Regression
+      ↓
+Trained Model
+      ↓
+New Email
+      ↓
+Prediction
+```
+
+---
+
+# 🧪 Example Detection
+
+### 🚨 Suspicious Email
+
+```text
+Subject:
+URGENT! Your account will be blocked
+
+Message:
+Your account has been temporarily blocked.
+Verify your password and OTP immediately.
+Click the link below to restore your account.
+```
+
+### 🔍 Detector
+
+```text
+⚠️ Urgent language detected
+⚠️ Password request detected
+⚠️ OTP request detected
+⚠️ Account threat detected
+⚠️ URL detected
+```
+
+### 🛡️ Result
+
+```text
+🔴 LIKELY PHISHING
+
+Risk Score: 85/100
+Risk Level: HIGH
+```
+
+---
+
+# 🏗️ Project Architecture
+
+```text
+                     👤 USER
+                       │
+                       ▼
+              🌐 Flask Web Interface
+                       │
+                       ▼
+                📩 Email Input
+                       │
+              ┌────────┴────────┐
+              ▼                 ▼
+        🤖 ML Prediction    🔍 Rule Checks
+              │                 │
+              └────────┬────────┘
+                       ▼
+                 📊 Risk Score
+                       │
+                       ▼
+              🚦 Final Classification
+                       │
+              ┌────────┼────────┐
+              ▼        ▼        ▼
+             🟢       🟡       🔴
+           Legit   Suspicious  Phishing
+                       │
+                       ▼
+                 💾 SQLite
+                 Scan History
+```
+
+---
+
+# 📂 Project Structure
+
+```text
+📦 E-Mail--Scam-Detector
+│
+├── 🐍 app.py
+├── 🧠 train_model.py
+├── 📊 dataset.csv
+├── 🤖 model.pkl
+├── 🔢 vectorizer.pkl
+├── 📋 requirements.txt
+├── 📖 GUIDE.md
+├── 🚫 .gitignore
+│
+├── 📁 templates
+│   ├── 🏠 index.html
+│   ├── 📊 result.html
+│   └── 📜 history.html
+│
+└── 📁 static
+    └── 🎨 style.css
+```
+
+---
+
+# 🛠️ Technology Stack
+
+<p align="center">
+
+🐍 **Python**
+🌐 **Flask**
+🤖 **Scikit-learn**
+📊 **Pandas**
+🔢 **TF-IDF**
+🧠 **Logistic Regression**
+🗄️ **SQLite**
+🎨 **HTML + CSS**
+
+</p>
+
+---
+
+# ⚡ Getting Started
+
+## 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Akalya70/E-Mail--Scam-Detector.git
+```
+
+```bash
+cd E-Mail--Scam-Detector
+```
+
+---
+
+## 2️⃣ Create a virtual environment
+
+### Windows
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+## 3️⃣ Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+---
+
+## 4️⃣ Train the AI model
+
+```bash
+python train_model.py
+```
+
+This creates/updates:
+
+```text
+🤖 model.pkl
+🔢 vectorizer.pkl
+```
+
+---
+
+## 5️⃣ Start the application
+
+```bash
+python app.py
+```
+
+Open your browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+# 🔐 Security
+
+The application treats email content as **untrusted input**.
+
+The system does **not**:
+
+```text
+❌ Automatically open links
+❌ Execute email attachments
+❌ Execute email content
+❌ Store passwords
+❌ Store OTPs
+❌ Guarantee that an email is safe
+```
+
+Always verify suspicious messages through official channels.
+
+---
+
+# 📈 Future Improvements
+
+The project can be extended with:
+
+```text
+📎 Attachment Analysis
+        ↓
+🌐 URL Reputation Checking
+        ↓
+📧 Real Email Inbox Integration
+        ↓
+🧠 Advanced ML Models
+        ↓
+📊 Analytics Dashboard
+        ↓
+🔔 Real-Time Alerts
+        ↓
+☁️ Cloud Deployment
+```
+
+---
+
+# 🎓 What I Learned
+
+Through this project, I learned:
+
+* 🐍 Python fundamentals
+* 🌐 Flask web development
+* 🤖 Machine Learning basics
+* 🔢 TF-IDF vectorization
+* 🧠 Logistic Regression
+* 📊 Dataset preprocessing
+* 🗄️ SQLite database operations
+* 🔗 Connecting ML models with a web application
+* 🔐 Basic application security
+* 🧪 Testing and debugging
+
+---
+
+# 💡 Project Objective
+
+The main objective is to create a simple system that helps users **identify potentially dangerous emails before interacting with them**.
+
+The project combines:
+
+```text
+Python
+  +
+Machine Learning
+  +
+Web Development
+  +
+Database
+  =
+🛡️ Email Security Application
+```
+
+---
+
+# 👩‍💻 Author
+
+<p align="center">
+
+### **Akalya M**
+
+🎓 Computer Science & Engineering
+
+💻 Aspiring Software Developer
+
+</p>
+
+<p align="center">
+
+<a href="https://github.com/Akalya70">
+<img src="https://img.shields.io/badge/GitHub-Akalya70-black?style=for-the-badge&logo=github"/>
+</a>
+
+</p>
+
+---
+
+# ⭐ Support
+
+If you found this project interesting, consider giving it a ⭐ on GitHub!
+
+<p align="center">
+
+**🔍 Analyze Emails • 🤖 Detect Threats • 🛡️ Stay Safe**
+
+</p>
+
+---
+
+<p align="center">
+
+### 🚀 Built with Python & Machine Learning
+
+**E-Mail Scam Detector — Turning suspicious emails into actionable warnings.**
+
+</p>
