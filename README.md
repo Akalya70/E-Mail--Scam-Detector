@@ -7,10 +7,6 @@
 </p>
 
 <p align="center">
-  <strong>🔍 Analyze • 🤖 Predict • 🛡️ Protect</strong>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Flask-Web%20App-black?style=for-the-badge&logo=flask&logoColor=white"/>
   <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
