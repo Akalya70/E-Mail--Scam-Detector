@@ -15,7 +15,8 @@
 
 ---
 
-## 🚨 What is this?
+
+## 🚨 
 
 **E-Mail Scam Detector** is a beginner-friendly AI-powered web application that analyzes email content and identifies potentially dangerous emails.
 
