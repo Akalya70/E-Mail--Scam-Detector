@@ -32,19 +32,7 @@ The application uses **TF-IDF + Logistic Regression** to learn patterns from ema
 
 ---
 
-## ✨ Why this project?
 
-Imagine receiving an email:
-
-> ⚠️ "URGENT! Your bank account will be blocked. Verify your password and OTP immediately!"
-
-Would you click the link?
-
-**Don't click first. Analyze first. 🔍**
-
-This project is designed to provide users with an additional layer of awareness before they interact with suspicious emails.
-
----
 
 # 🧠 How the AI Works
 
