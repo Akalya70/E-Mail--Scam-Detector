@@ -257,7 +257,6 @@ Risk Level: HIGH
 └── 📁 static
     └── 🎨 style.css
 ```
-
 ---
 
 # 🛠️ Technology Stack
