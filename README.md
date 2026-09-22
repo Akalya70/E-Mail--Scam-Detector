@@ -11,7 +11,6 @@
   <img src="https://img.shields.io/badge/Flask-Web%20App-black?style=for-the-badge&logo=flask&logoColor=white"/>
   <img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite&logoColor=black"/>
 </p>
-
 ---
 
 ## 🚨 
