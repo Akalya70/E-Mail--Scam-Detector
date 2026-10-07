@@ -5,7 +5,6 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=00AEEF&center=true&vCenter=true&width=800&lines=AI-Powered+Email+Security;Detect+Phishing+%7C+Detect+Scams+%7C+Stay+Safe;Machine+Learning+%2B+Flask+%2B+Python" alt="Typing Animation"/>
 
 </p>
-
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Database-SQLite-lightgrey?style=for-the-badge&logo=sqlite&logoColor=black"/>
