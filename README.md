@@ -138,7 +138,6 @@ immediately
 and represents the text numerically.
 
 ---
-
 ### 2️⃣ Logistic Regression
 
 The numerical TF-IDF features are given to the **Logistic Regression** classifier.
