@@ -90,7 +90,6 @@ The application uses **TF-IDF + Logistic Regression** to learn patterns from ema
 **Low Risk**
 
 The email contains fewer suspicious indicators.
-
 ### 🟡 31–70
 
 **Medium Risk**
