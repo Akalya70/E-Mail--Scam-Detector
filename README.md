@@ -306,7 +306,6 @@ python train_model.py
 ```
 
 This creates/updates:
-
 ```text
 🤖 model.pkl
 🔢 vectorizer.pkl
