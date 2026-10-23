@@ -119,7 +119,6 @@ Example:
 ```text
 "Verify your password immediately"
 ```
-
 TF-IDF identifies the importance of words such as:
 
 ```text
